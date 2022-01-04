@@ -1,0 +1,16 @@
+.navbar-rh {
+  background-color: #eb5b22;
+  border-color: #e7e7e7;
+  border-radius: 0;
+  border-width: 0;
+  box-shadow: none;
+  margin-bottom: 3%;
+  padding: 1%;
+  position: relative;
+  z-index: 1030;
+}
+
+.navbar-rh > .container-fluid > a,
+.nav-item > a {
+  color: white !important;
+}
