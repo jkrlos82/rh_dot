@@ -15,4 +15,14 @@ class Factura_compra extends Model
     {
         return $this->hasMany(Compra::class);
     }
+
+    public function Cuentaxpagar()
+    {
+        return $this->hasOne(Cuentaxpagar::class);
+    }
+
+    public function Proveedor()
+    {
+        return $this->belongsTo(Proveedor::class);
+    }
 }

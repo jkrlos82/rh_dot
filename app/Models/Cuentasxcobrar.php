@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Cuentasxcobrar extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
+    public function facturaVenta()
+    {
+        return $this->belongsTo(Factura_venta::class);
+    }
+
+    public function AbonoCxc()
+    {
+        return $this->hasMany(Abono_cxc::class);
+    }
 }
