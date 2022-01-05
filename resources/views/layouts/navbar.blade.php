@@ -22,7 +22,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-rh">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{url('/')}}">
             <img src="{{URL::asset('/imagenes/Logo.jpg')}}" alt="" width="50" height="32" class="d-inline-block align-text-top">
             RH Dotaciones
         </a>
@@ -36,8 +36,8 @@
                         Compras
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Crear Compra</a></li>
-                        <li><a class="dropdown-item" href="#">Cuenta Por Pagar</a></li>
+                        <li><a class="dropdown-item" href="{{url('/compras/create')}}">Crear Compra</a></li>
+                        <li><a class="dropdown-item" href="{{url('/cuentasxpagar/list')}}">Cuenta Por Pagar</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -45,8 +45,8 @@
                         Ventas
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Crear Venta</a></li>
-                        <li><a class="dropdown-item" href="#">Cuenta Por Cobrar</a></li>
+                        <li><a class="dropdown-item" href="{{url('/ventas/create')}}">Crear Venta</a></li>
+                        <li><a class="dropdown-item" href="{{url('/cuentasxcobrar/list')}}">Cuenta Por Cobrar</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -54,8 +54,8 @@
                         Clientes
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Crear Cliente</a></li>
-                        <li><a class="dropdown-item" href="#">Consultar Cliente</a></li>
+                        <li><a class="dropdown-item" href="{{url('/clientes/create')}}">Crear Cliente</a></li>
+                        <li><a class="dropdown-item" href="{{url('/clientes/{id}')}}">Consultar Cliente</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -63,8 +63,8 @@
                         Proveedores
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Crear Proveedor</a></li>
-                        <li><a class="dropdown-item" href="#">Consultar Proveedor</a></li>
+                        <li><a class="dropdown-item" href="{{url('/proveedores/create')}}">Crear Proveedor</a></li>
+                        <li><a class="dropdown-item" href="{{url('/proveedores/{id}')}}">Consultar Proveedor</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -81,7 +81,7 @@
                         Gasto
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Crear Gasto</a></li>
+                        <li><a class="dropdown-item" href="{{url('/gastos/create')}}">Crear Gasto</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -89,7 +89,7 @@
                         Cierre Diario
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Crear Cierre</a></li>
+                        <li><a class="dropdown-item" href="{{url('/cierres')}}">Reporte Cierre</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -97,7 +97,7 @@
                         Inventario
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Reporte</a></li>
+                        <li><a class="dropdown-item" href="{{url('/inventarios')}}">Reporte</a></li>
                     </ul>
                 </li>
             </ul>
