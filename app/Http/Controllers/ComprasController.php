@@ -6,5 +6,17 @@ use Illuminate\Http\Request;
 
 class ComprasController extends Controller
 {
-    //create y un show
+    public function create()
+    {
+        return view('compras.create');
+    }
+
+    public function index(Request $request)
+    {
+        if ($request->input('cancelado') == 'true') {
+            return view('compras.index');
+        } else {
+            return view('compras.list');
+        }
+    }
 }
