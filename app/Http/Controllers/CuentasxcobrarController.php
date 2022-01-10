@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class CuentasxcobrarController extends Controller
 {
-    //list
+    public function list()
+    {
+        return view('ventas.list');
+    }
 }

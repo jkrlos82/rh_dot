@@ -55,7 +55,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{url('/clientes/create')}}">Crear Cliente</a></li>
-                        <li><a class="dropdown-item" href="{{url('/clientes/{id}')}}">Consultar Cliente</a></li>
+                        <li><a class="dropdown-item" href="{{url('/clientes/list')}}">Consultar Clientes</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -64,7 +64,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{url('/proveedores/create')}}">Crear Proveedor</a></li>
-                        <li><a class="dropdown-item" href="{{url('/proveedores/{id}')}}">Consultar Proveedor</a></li>
+                        <li><a class="dropdown-item" href="{{url('/proveedores/list')}}">Consultar Proveedores</a></li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
@@ -102,8 +102,8 @@
                 </li>
             </ul>
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
         </div>
     </div>

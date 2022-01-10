@@ -27,18 +27,22 @@ Route::get('/', function () {
 });
 
 Route::get('/compras/create', [ComprasController::class, 'create']);
+Route::post('/compras/index', [ComprasController::class, 'index']);
 
 Route::get('/cuentasxpagar/list', [CuentasxpagarController::class, 'list']);
 
 Route::get('/ventas/create', [VentasController::class, 'create']);
+Route::post('/ventas/index', [VentasController::class, 'index']);
 
 Route::get('/cuentasxcobrar/list', [CuentasxcobrarController::class, 'list']);
 
 Route::get('/clientes/create', [ClientesController::class, 'create']);
-Route::get('/clientes/{id}', [ClientesController::class, 'show']);
+Route::post('/clientes/{id}', [ClientesController::class, 'show']);
+Route::get('/clientes/list', [ClientesController::class, 'list']);
 
 Route::get('/proveedores/create', [ProveedoresController::class, 'create']);
-Route::get('/proveedores/{id}', [ProveedoresController::class, 'show']);
+Route::post('/proveedores/{id}', [ProveedoresController::class, 'show']);
+Route::get('/proveedores/list', [ProveedoresController::class, 'list']);
 
 Route::get('/productos', [ProductosController::class, 'index']);
 Route::post('/productos', [ProductosController::class, 'store']);
