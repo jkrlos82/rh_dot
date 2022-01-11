@@ -52,6 +52,7 @@ Route::put('/productos/{producto}', [ProductosController::class, 'update']);
 Route::get('/productos/{id}/edit', [ProductosController::class, 'edit']);
 
 Route::get('/gastos/create', [GastosController::class, 'create']);
+Route::post('/gastos/list', [GastosController::class, 'list']);
 
 Route::get('/cierres', [CierresController::class, 'index']);
 
