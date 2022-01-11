@@ -12,20 +12,28 @@
         </tr>
     </thead>
     <tbody>
-        @foreach($producto as $productos)
+
+        @foreach($productos as $producto)
         <tr>
-            <th scope="row">{{$productos->id}}</th>
-            <td>{{$productos->nombre}}</td>
+            <th scope="row">{{$producto->id}}</th>
+            <td>{{$producto->nombre}}</td>
 
             <td><a href="/productos/{{$producto->id}}">ver</a></td>
             <td><a href="/productos/{{$producto->id}}/edit">Actualizar Producto</a></td>
 
         </tr>
         @endforeach
-        @if (session('notice'))
+
+        @if (isset($result))
+        @if (isset($result->success))
         <div class="alert alert-success">
-            {{ session('notice') }}
+            {{$result->success}}
         </div>
+        @else
+        <div class="alert alert-danger">
+            {{$result->error}}
+        </div>
+        @endif
         @endif
     </tbody>
 </table>
