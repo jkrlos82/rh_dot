@@ -9,8 +9,6 @@ class Categoria extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
-
     public function producto()
     {
         return $this->belongsTo(Producto::class);
@@ -25,4 +23,6 @@ class Categoria extends Model
     {
         return $this->hasMany(Venta::class);
     }
+
+    protected $guarded = [];
 }

@@ -17,8 +17,8 @@ class ProductosController extends Controller
      */
     public function index()
     {
-        $producto = Producto::all();
-        return View('productos.index', compact('producto'));
+        $productos = Producto::all();
+        return View('productos.index', compact('productos'));
     }
 
     /**
@@ -39,6 +39,7 @@ class ProductosController extends Controller
      */
     public function store(Request $request)
     {
+
         $producto = new ProductosService();
         $result = $producto->createProducto($request);
         return Redirect::to('producto')
@@ -53,8 +54,8 @@ class ProductosController extends Controller
      */
     public function show($id)
     {
-        $producto = Producto::find($id);
-        return view('productos.show', compact('producto'));
+        $productos = Producto::find($id);
+        return view('productos.show', compact('productos'));
     }
 
 
@@ -66,6 +67,7 @@ class ProductosController extends Controller
      */
     public function edit($id)
     {
+
         $producto = Producto::find($id);
         return View('productos/edit', compact('producto'));
     }
@@ -82,10 +84,12 @@ class ProductosController extends Controller
         $request->validate([
             'nombre' => 'required',
         ]);
-        $productos = new ProductosService();
-        $productos->updateProducto($request, $producto);
 
-        return Redirect::to('productos')
-            ->with('notice', 'El producto ha sido actualizado correctamente.');
+        $productos = Producto::all();
+
+        $servicio = new ProductosService();
+        $result = json_decode($servicio->updateProducto($request, $producto->id));
+
+        return view('productos.index', compact('result', 'productos'));
     }
 }
